@@ -1,0 +1,28 @@
+<!--Viết hàm tryRemoveFromArray() nhận vào một mảng các số nguyên, và một số nguyên x. Hàm  trả về mảng ban đầu nếu không có số nguyên x trong mảng. Nếu tìm thấy số nguyên x trả về mảng sau khi xóa các số nguyênx đó.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let array = [1,2,3,4,5];
+    let x = 4;
+    
+    function tryRemoveFromAray(array, num) {
+
+        for (let i in array){
+            if (array[i] == num){
+                array.splice(i,1);
+            }
+        }
+
+        return array;
+    }
+
+    console.log(tryRemoveFromAray(array,x));
+    
+</script>
+</body>
+</html>

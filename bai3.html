@@ -1,0 +1,34 @@
+<!--Viết hàm isFibonacci() nhận vào một số nguyên , trả về true nếu số đó là số nằm trong dãy Fibonacci và false nếu không nằm trong dãy Fibonacci-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let num = 100;
+
+    function isFibonacci(num) {
+        let fibonacci = [];
+        let length = 0;
+        let a = 1, b = 0, term = 0;
+
+        while (a < num){
+            fibonacci.push(a);
+            term = a;
+            a += b;
+            b = term;
+            if (a == num){
+                return true;
+            }
+            length++;
+        }
+        return false;
+    }
+
+    console.log(isFibonacci(num));
+
+</script>
+</body>
+</html>
